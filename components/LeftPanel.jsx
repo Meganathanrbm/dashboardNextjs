@@ -4,7 +4,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import navigationConstants from "../constant/navigation.constant";
-import gift from "./../public/assets/icons/gift.svg";
 import settings from "./../public/assets/icons/settings.svg";
 import help from "./../public/assets/icons/help.svg";
 import dashBoardlogo from "./../public/assets/icons/dashBoardlogo.svg";
@@ -34,34 +33,34 @@ const LeftPanel = ({ children }) => {
             className="d-flex flex-column justify-start  gap-0"
             style={{ color: "rgba(143, 143, 143, 1)" }}
           >
-            <Image
+            {/* <Image
               src={dashBoardlogo}
               height={35}
               alt="logo"
               className="mb-4"
-            />
+            /> */}
             {navigationConstants.map((item, index) => {
               {
                 /* console.log("currentLoggedInUser", currentLoggedInUser); */
               }
               return (
                 <li
-                  className={`d-flex li align-items-center p-3 pr-4 gap-3 rounded ${
+                  className={`d-flex li align-items-center p-3  gap-3 rounded ${
                     path.includes(item.path) ? styles.activeLink : ""
                   }`}
                   key={index}
                   onClick={() => router.push(item.path)}
                 >
-                  <Image
+                  {/* <Image
                     src={path.includes(item.path) ? item.activeIcon : item.icon}
                     alt={item.name}
                     height={16}
                     srcset=""
-                  />
+                  /> */}
                   <Link
                     href="#"
-                    className={`no-underline decoration-0 font-semibold text-black`}
-                    to={item.path === "/profile" ? `/profile/$$$` : item.path}
+                    className={`no-underline decoration-0 text-base font-semibold text-black`}
+                    to={item.path}
                   >
                     {item.name}
                   </Link>

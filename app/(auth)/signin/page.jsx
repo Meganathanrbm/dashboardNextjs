@@ -9,6 +9,7 @@ import ForgetPassword from "./ForgetPassword";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/utils/AuthProvider";
 
 const Signin = () => {
   const [forgetPassword, setForgetPassword] = useState(false);
@@ -16,9 +17,12 @@ const Signin = () => {
 
   const [userData, setUserData] = useState({ email: "", password: "" });
   const [isUserNotAuthenticated, setIsUserNotAuthenticated] = useState(false);
+  const auth = useAuth();
 
   function handleLogin() {
-    router.push("/");
+    console.log(auth);
+    auth.login;
+    router.push("/bookkeeping");
   }
 
   const checkIfUserIsLoggedIn = () => {
@@ -56,7 +60,7 @@ const Signin = () => {
           }}
         >
           <div className="container bg-primary w-50 d-flex flex-column justify-content-start align-items-start  p-5 gap-4 rounded">
-            <Image src={logo} alt="" srcset="" />
+            {/* <Image src={logo} alt="" srcset="" /> */}
             <div>
               <h1>Welcome Back</h1>
               <p>

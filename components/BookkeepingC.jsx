@@ -6,7 +6,7 @@ import Pagination from "@mui/material/Pagination";
 import { TextField } from "@mui/material";
 import Tabel from "./Tabel";
 
-const DashboardC = () => {
+const BookkeepingC = () => {
   const [page, setPage] = useState(1);
   const handleChange = (event, value) => {
     setPage(value);
@@ -913,8 +913,11 @@ const DashboardC = () => {
       {/* page Navigation */}
       <div className="flex flex-row  items-center mt-2 py-2  border-b-2  justify-between">
         <p className="">
-          {(page - 1) * rowsPerPage + 1}-{page * rowsPerPage} of{" "}
-          {dummyData.length}
+          {(page - 1) * rowsPerPage + 1}-
+          {page * rowsPerPage > dummyData.length
+            ? dummyData.length
+            : page * rowsPerPage}{" "}
+          of {dummyData.length}
         </p>
 
         <Pagination
@@ -929,4 +932,4 @@ const DashboardC = () => {
   );
 };
 
-export default DashboardC;
+export default BookkeepingC;

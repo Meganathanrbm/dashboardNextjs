@@ -9,28 +9,52 @@ import activeLearning from "../public/assets/icons/activeLearning.svg";
 
 const navigationConstants = [
   {
-    name: "Dashboard",
-    path: "/dashboard",
-    icon: dashboard,
-    activeIcon: activeDashboard,
+    name: "Bookkeeping",
+    path: "/bookkeeping",
+    // icon: dashboard,
+    // activeIcon: activeDashboard,
   },
   {
-    name: "Learning",
-    path: "/learning",
-    icon: learning,
-    activeIcon: activeLearning,
+    name: "GST",
+    path: "/gst",
+    // icon: learning,
+    // activeIcon: activeLearning,
   },
   {
-    name: "Tools",
-    path: "/tools",
-    icon: tools,
-    activeIcon: activeTools,
+    name: "HST",
+    path: "/hst",
+    // icon: tools,
+    // activeIcon: activeTools,
   },
   {
-    name: "Profile",
-    path: "/profile",
-    icon: profile,
-    activeIcon: activeProfile,
+    name: "Year End",
+    path: "/yearEnd",
+    // icon: profile,
+    // activeIcon: activeProfile,
+  },
+  {
+    name: "Dividends",
+    path: "/dividends",
+    // icon: tools,
+    // activeIcon: activeTools,
+  },
+  {
+    name: "Annual Returns",
+    path: "/annualReturns",
+    // icon: profile,
+    // activeIcon: activeProfile,
+  },
+  {
+    name: "Incorporation",
+    path: "/incorporation",
+    // icon: tools,
+    // activeIcon: activeTools,
+  },
+  {
+    name: "Payroll",
+    path: "/payroll",
+    // icon: profile,
+    // activeIcon: activeProfile,
   },
 ];
 
